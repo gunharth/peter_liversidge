@@ -1,0 +1,35 @@
+.landscapeMedium,
+.portraitMedium {
+    height: 620px;
+    padding: 40px 0 0 40px;
+}
+
+.landscapeSmall,
+.portraitSmall {
+    height: 480px;
+    padding: 120px 0 0 40px;
+}
+
+.landscapeSupersmall,
+.portraitSupersmall {
+    height: 360px;
+    padding: 170px 0 0 40px;
+}
+
+.landscapeBottom {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    bottom: 40px;
+    left: -270px;
+    z-index: 2;
+}
+
+.landscapeTop {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    top: 40px;
+    left: -270px;
+    z-index: 2
+}
