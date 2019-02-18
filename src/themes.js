@@ -18,14 +18,16 @@ There's a default theme/display for landscape and portrait images
 */
 
 // landscape
+let landscapeLarge = [2];
 let landscapeMedium = [];
 let landscapeSmall = [3, 8];
 let landscapeSupersmall = [4, 5];
 
 // portrait
+let portraitLarge = [1];
 let portraitMedium = [];
 let portraitSmall = [];
-let portraitSupersmall = [1];
+let portraitSupersmall = [];
 
 // Overlaps
 let landscapeBottom = [7];

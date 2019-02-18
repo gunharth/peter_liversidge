@@ -7,9 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
+// 'use strict';
 window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"); // add jquery
 
 $(function () {
@@ -25,15 +23,18 @@ $(function () {
 
   for (var i = 1; i <= numOfImages; i++) {
     var style = '';
+    if (landscapeLarge.includes(i)) style = 'landscapeLarge';
     if (landscapeMedium.includes(i)) style = 'landscapeMedium';
     if (landscapeSmall.includes(i)) style = 'landscapeSmall';
     if (landscapeSupersmall.includes(i)) style = 'landscapeSupersmall';
+    if (portraitLarge.includes(i)) style = 'portraitLarge';
     if (portraitMedium.includes(i)) style = 'portraitMedium';
     if (portraitSmall.includes(i)) style = 'portraitSmall';
     if (portraitSupersmall.includes(i)) style = 'portraitSupersmall';
     if (landscapeBottom.includes(i)) style = 'landscapeBottom';
-    if (landscapeTop.includes(i)) style = 'landscapeTop';
-    cardSection.append("<div class=\"card--content\"><img src=\"".concat(imageURL, "/").concat(String(i).padStart(3, '0'), ".jpg\" class=\"").concat(style, "\" alt=\"\">").concat(debug ? "<div class=\"number\">".concat(i, "</div>") : '', "</div>"));
+    if (landscapeTop.includes(i)) style = 'landscapeTop'; // cardSection.append(`<div class="card--content" class="${style}-outer">${debug ? `<div class="number">${i}</div>` : ''}</div>`);
+
+    cardSection.append("<div class=\"card--content\"><img src=\"".concat(imageURL, "/").concat(String(i).padStart(3, '0'), ".jpg\" class=\"").concat(style, "\" alt=\"\">").concat(debug ? "<div class=\"number\">".concat(i, "</div>") : '', "</div>")); // cardSection.append(`<div class="card--content"><img src="images/transparent.png" class="${style}" alt="">${debug ? `<div class="number">${i}</div>` : ''}</div>`);
   }
 
   $('img').on('click', function (e) {

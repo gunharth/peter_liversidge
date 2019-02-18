@@ -9,6 +9,9 @@ body {
   margin: 0;
   display: flex;
   overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
 }
 
 body.debug {
@@ -79,6 +82,16 @@ img {
   background: #ccc;
   padding: 10px;
   z-index: 3;
+}
+
+.landscapeLarge {
+  height: 700px;
+  width: 1050px;
+}
+
+.portraitLarge {
+  height: 700px;
+  width: 467px;
 }
 
 .landscapeMedium,

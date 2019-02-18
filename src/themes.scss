@@ -1,26 +1,36 @@
+.landscapeLarge {
+    height: $defaultHeigth;
+    width: $defaultLandscapeWidth;
+}
+
+.portraitLarge {
+    height: $defaultHeigth;
+    width: $defaultPortraitWidth;
+}
+
 .landscapeMedium,
 .portraitMedium {
-    height: 620px;
-    padding: 40px 0 0 40px;
+    height: $defaultHeigth - $defaultSpacing*2;
+    padding: $defaultSpacing 0 0 $defaultSpacing;
 }
 
 .landscapeSmall,
 .portraitSmall {
     height: 480px;
-    padding: 120px 0 0 40px;
+    padding: 120px 0 0 $defaultSpacing;
 }
 
 .landscapeSupersmall,
 .portraitSupersmall {
     height: 360px;
-    padding: 170px 0 0 40px;
+    padding: 170px 0 0 $defaultSpacing;
 }
 
 .landscapeBottom {
     position: absolute;
     width: 500px;
     height: auto;
-    bottom: 40px;
+    bottom: $defaultSpacing;
     left: -270px;
     z-index: 2;
 }
@@ -29,7 +39,7 @@
     position: absolute;
     width: 500px;
     height: auto;
-    top: 40px;
+    top: $defaultSpacing;
     left: -270px;
     z-index: 2
 }

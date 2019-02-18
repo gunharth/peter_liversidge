@@ -1,3 +1,7 @@
+$defaultHeigth: 700px;
+$defaultLandscapeWidth: 1050px;
+$defaultPortraitWidth: 467px;
+$defaultSpacing: 40px;
 html,
 body {
     width: 100%;
@@ -9,6 +13,8 @@ body {
     margin: 0;
     display: flex;
     overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
 }
 
 body.debug {
@@ -25,13 +31,14 @@ body.debug {
 }
 
 img {
-    height: 700px;
+    height: $defaultHeigth;
+    // width: $defaultWidth;
     z-index: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    padding-left: 40px;
+    padding-left: $defaultSpacing;
 }
 
 #animation-wrapper {
