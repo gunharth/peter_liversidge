@@ -29,7 +29,9 @@
     "webpack-livereload-plugin": "^1.2.0"
   },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "lazysizes": "^4.1.6",
+    "yall-js": "^2.2.2"
   },
   "main": "webpack.mix.js",
   "repository": {

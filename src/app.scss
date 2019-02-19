@@ -9,30 +9,70 @@ body {
 }
 
 body {
-    background-color: #ccc;
+    background-color: #DDDCE3;
     margin: 0;
     display: flex;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
+    align-items: center;
 }
 
 body.debug {
     overflow: scroll;
 }
 
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgb(246, 246, 246);
+    display: none;
+}
+
+#overlay-loader {
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 20px);
+    z-index: 200;
+    text-align: center;
+}
+
+#overlay-image {
+    height: 100%;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay-image div {
+    height: 80%;
+    width: 80%; // margin: 10% 0 0 10%;
+    background: url(../public/img/transparent.png) center center / contain no-repeat;
+    position: static;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: none;
+}
+
 .card {
     display: flex;
     overflow-x: auto;
+    height: $defaultHeigth;
 }
 
 .card--content {
     position: relative;
 }
 
-img {
-    height: $defaultHeigth;
-    // width: $defaultWidth;
+.card--content img {
+    height: $defaultHeigth; // width: $defaultWidth;
     z-index: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -41,8 +81,12 @@ img {
     padding-left: $defaultSpacing;
 }
 
+.card--content img:hover {
+    cursor: pointer;
+}
+
 #animation-wrapper {
-    margin-top: 10%;
+    // margin-top: 5%;
     will-change: transform;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -68,7 +112,7 @@ img {
 .number {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: $defaultSpacing;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     opacity: 0.6;

@@ -24,7 +24,6 @@ mix.setPublicPath('public');
 
 // mix.js('src/app.js', 'public/').sass('src/app.scss', 'dist/');
 mix.js('src/app.js', 'public/js').sass('src/app.scss', 'public/css').extract();
-mix.copy('src/themes.js', 'public/js');
 mix.copy('src/index.html', 'public/index.html');
 
 // mix.browserSync({

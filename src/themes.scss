@@ -1,45 +1,63 @@
-.landscapeLarge {
-    height: $defaultHeigth;
-    width: $defaultLandscapeWidth;
-}
-
-.portraitLarge {
-    height: $defaultHeigth;
-    width: $defaultPortraitWidth;
-}
-
-.landscapeMedium,
-.portraitMedium {
-    height: $defaultHeigth - $defaultSpacing*2;
-    padding: $defaultSpacing 0 0 $defaultSpacing;
-}
-
-.landscapeSmall,
-.portraitSmall {
-    height: 480px;
-    padding: 120px 0 0 $defaultSpacing;
-}
-
-.landscapeSupersmall,
-.portraitSupersmall {
-    height: 360px;
-    padding: 170px 0 0 $defaultSpacing;
-}
-
-.landscapeBottom {
-    position: absolute;
-    width: 500px;
-    height: auto;
-    bottom: $defaultSpacing;
-    left: -270px;
-    z-index: 2;
-}
-
-.landscapeTop {
-    position: absolute;
-    width: 500px;
-    height: auto;
-    top: $defaultSpacing;
-    left: -270px;
-    z-index: 2
+.card--content img {
+    &.landscapeLarge {
+        height: $defaultHeigth;
+        width: $defaultLandscapeWidth;
+    }
+    &.portraitLarge {
+        height: $defaultHeigth;
+        width: $defaultPortraitWidth;
+    }
+    &.landscapeMediumLarge,
+    &.portraitMediumLarge {
+        height: $defaultHeigth - $defaultSpacing*2;
+        padding: $defaultSpacing 0 0 $defaultSpacing;
+    }
+    &.landscapeMedium {
+        height: $defaultHeigth - $defaultSpacing*6;
+        padding: $defaultSpacing*3 0 0 $defaultSpacing;
+    }
+    &.portraitMedium {
+        height: $defaultHeigth - $defaultSpacing*4;
+        padding: $defaultSpacing*2 0 0 $defaultSpacing;
+    }
+    &.landscapeSmall {
+        height: $defaultHeigth - 340;
+        padding: $defaultSpacing*4+10 0 0 $defaultSpacing;
+    }
+    &.portraitSmall {
+        height: 480px;
+        padding: 120px 0 0 $defaultSpacing;
+    }
+    &.landscapeSupersmall {
+        height: $defaultHeigth - $defaultSpacing*6;
+        padding: $defaultSpacing*3 0 0 $defaultSpacing;
+    }
+    &.portraitSupersmall {
+        height: 360px;
+        padding: 170px 0 0 $defaultSpacing;
+    }
+    &.landscapeBottom {
+        position: absolute;
+        width: $defaultSpacing*10;
+        height: auto;
+        bottom: $defaultSpacing;
+        left: -$defaultSpacing*5 - 20;
+        z-index: 2;
+    }
+    &.landscapeMiddle {
+        position: absolute;
+        width: $defaultSpacing*10;
+        height: auto;
+        top: $defaultHeigth/2 - 134;
+        left: -$defaultSpacing*5 - 20;
+        z-index: 2;
+    }
+    &.landscapeTop {
+        position: absolute;
+        width: $defaultSpacing*10;
+        height: auto;
+        top: $defaultSpacing;
+        left: -$defaultSpacing*5 - 20;
+        z-index: 2
+    }
 }
