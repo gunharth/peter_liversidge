@@ -5,7 +5,7 @@ require('lazysizes');
 
 $(function () {
     if (debug) {
-        $('body').addClass('debug');
+        $('#animation-wrapper').addClass('debug');
     } else {
         setTimeout(() => {
             $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration+"s");
@@ -37,7 +37,7 @@ $(function () {
     }
     $('#card-section').on('click', 'img', function (e) {
         e.preventDefault();
-        $('#animation-wrapper').toggleClass('paused');
+        if (!debug) $('#animation-wrapper').toggleClass('paused');
         let imageUrl = $(this).attr('data-src');
         $('#overlay-image div').css('background-image', 'url(' + imageUrl + ')');
         $('#overlay').fadeIn();
@@ -49,7 +49,7 @@ $(function () {
         $('#overlay').fadeOut();
         $('#overlay-loader').show();
         $('#overlay-image div').hide();
-        $('#animation-wrapper').toggleClass('paused');
+        if (!debug)  $('#animation-wrapper').toggleClass('paused');
     });
 
     setInterval(function () { lazySizes.loader.checkElems() }, 1000);

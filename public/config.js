@@ -7,7 +7,7 @@ let animationDuration = 4800; // total seconds for entire slideshow
 /*
 Image Display
 add image number in a comma separated list to the theme arrays e.g.
-let theme = [2, 6, 12]; image 2, 6 and 12 will be using the style 'theme'
+let theme = [2, 6, 12]; image 2, 6 and 12 will be using the style 'th^eme'
 */
 
 // landscapeLarge = default display for all images 1050x700
@@ -17,7 +17,7 @@ let landscapeSmall = []; // 540x360
 let landscapeSupersmall = []; // 450x300
 
 // portrait
-let portraitLarge = [1,10,12,14,15,17,35,36,39,40,41,42]; // 467x700
+let portraitLarge = [1,10,12,15,17,35,36,39,40,41,42]; // 467x700
 let portraitMediumLarge = []; // 414x620
 let portraitMedium = []; // 360x540
 let portraitSmall = []; // 320x480
