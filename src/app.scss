@@ -1,7 +1,11 @@
-$defaultHeigth: 700px;
+$defaultHeight: 700px;
 $defaultLandscapeWidth: 1050px;
 $defaultPortraitWidth: 467px;
 $defaultSpacing: 40px;
+// $defaultHeight: 1000px;
+// $defaultLandscapeWidth: 1540px;
+// $defaultPortraitWidth: 667px;
+// $defaultSpacing: 40px;
 html,
 body {
     width: 100%;
@@ -60,7 +64,7 @@ body {
 .card {
     display: flex;
     overflow-x: auto;
-    height: $defaultHeigth;
+    height: $defaultHeight;
 }
 
 .card--content {
@@ -68,7 +72,7 @@ body {
 }
 
 .card--content img {
-    height: $defaultHeigth; // width: $defaultWidth;
+    height: $defaultHeight; // width: $defaultWidth;
     z-index: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

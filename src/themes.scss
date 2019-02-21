@@ -1,63 +1,63 @@
 .card--content img {
     &.landscapeLarge {
-        height: $defaultHeigth;
+        height: $defaultHeight;
         width: $defaultLandscapeWidth;
     }
     &.portraitLarge {
-        height: $defaultHeigth;
+        height: $defaultHeight;
         width: $defaultPortraitWidth;
     }
     &.landscapeMediumLarge,
     &.portraitMediumLarge {
-        height: $defaultHeigth - $defaultSpacing*2;
+        height: $defaultHeight - $defaultSpacing*2;
         padding: $defaultSpacing 0 0 $defaultSpacing;
     }
     &.landscapeMedium {
-        height: $defaultHeigth - $defaultSpacing*6;
+        height: $defaultHeight - $defaultSpacing*6;
         padding: $defaultSpacing*3 0 0 $defaultSpacing;
     }
     &.portraitMedium {
-        height: $defaultHeigth - $defaultSpacing*4;
+        height: $defaultHeight - $defaultSpacing*4;
         padding: $defaultSpacing*2 0 0 $defaultSpacing;
     }
     &.landscapeSmall {
-        height: $defaultHeigth - 340;
+        height: $defaultHeight - 340;
         padding: $defaultSpacing*4+10 0 0 $defaultSpacing;
     }
     &.portraitSmall {
-        height: 480px;
+        height: $defaultHeight - $defaultSpacing*5 - 20;
         padding: 120px 0 0 $defaultSpacing;
     }
     &.landscapeSupersmall {
-        height: $defaultHeigth - $defaultSpacing*6;
+        height: $defaultHeight - $defaultSpacing*6;
         padding: $defaultSpacing*3 0 0 $defaultSpacing;
     }
     &.portraitSupersmall {
-        height: 360px;
+        height: $defaultHeight - $defaultSpacing*8 - 20;
         padding: 170px 0 0 $defaultSpacing;
     }
     &.landscapeBottom {
         position: absolute;
-        width: $defaultSpacing*10;
+        width: $defaultHeight - 300;
         height: auto;
         bottom: $defaultSpacing;
-        left: -$defaultSpacing*5 - 20;
+        left: -(($defaultHeight - 300) / 2) - 20;
         z-index: 2;
     }
     &.landscapeMiddle {
         position: absolute;
-        width: $defaultSpacing*10;
+        width: $defaultHeight - 300;
         height: auto;
-        top: $defaultHeigth/2 - 134;
-        left: -$defaultSpacing*5 - 20;
+        top: $defaultHeight/2 - 134;
+        left: -(($defaultHeight - 300) / 2) - 20;
         z-index: 2;
     }
     &.landscapeTop {
         position: absolute;
-        width: $defaultSpacing*10;
+        width: $defaultHeight - 300;
         height: auto;
         top: $defaultSpacing;
-        left: -$defaultSpacing*5 - 20;
+        left: -(($defaultHeight - 300) / 2) - 20;
         z-index: 2
     }
 }
