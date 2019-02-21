@@ -3,6 +3,7 @@
 }
 
 .card--content img {
+    padding-left: $defaultSpacing;
     &.landscapeLarge {
         height: $defaultHeight;
         width: $defaultLandscapeWidth;

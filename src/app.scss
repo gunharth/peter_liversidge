@@ -1,11 +1,3 @@
-$defaultHeight: 700px;
-$defaultLandscapeWidth: 1050px;
-$defaultPortraitWidth: 467px;
-$defaultSpacing: 40px;
-// $defaultHeight: 1000px;
-// $defaultLandscapeWidth: 1540px;
-// $defaultPortraitWidth: 667px;
-// $defaultSpacing: 40px;
 html,
 body {
     width: 100%;
@@ -76,7 +68,6 @@ body {
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    padding-left: $defaultSpacing;
 }
 
 .card--content img:hover {
@@ -121,5 +112,14 @@ body {
     padding: 10px;
     z-index: 3
 }
+
+$defaultHeight: 700px;
+$defaultLandscapeWidth: 1050px;
+$defaultPortraitWidth: 467px;
+$defaultSpacing: 40px;
+// $defaultHeight: 1000px;
+// $defaultLandscapeWidth: 1540px;
+// $defaultPortraitWidth: 667px;
+// $defaultSpacing: 40px;
 
 @import 'themes.scss';
