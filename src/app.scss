@@ -64,7 +64,6 @@ body {
 .card {
     display: flex;
     overflow-x: auto;
-    height: $defaultHeight;
 }
 
 .card--content {
@@ -72,7 +71,6 @@ body {
 }
 
 .card--content img {
-    height: $defaultHeight; // width: $defaultWidth;
     z-index: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -116,7 +114,6 @@ body {
 .number {
     position: absolute;
     bottom: 0;
-    left: $defaultSpacing;
     font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
     opacity: 0.6;

@@ -57,7 +57,6 @@ body {
 .card {
   display: flex;
   overflow-x: auto;
-  height: 700px;
 }
 
 .card--content {
@@ -65,7 +64,6 @@ body {
 }
 
 .card--content img {
-  height: 700px;
   z-index: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -119,13 +117,16 @@ body {
 .number {
   position: absolute;
   bottom: 0;
-  left: 40px;
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
   opacity: 0.6;
   background: #ccc;
   padding: 10px;
   z-index: 3;
+}
+
+.card {
+  height: 700px;
 }
 
 .card--content img.landscapeLarge {
@@ -199,5 +200,9 @@ body {
   top: 40px;
   left: -220px;
   z-index: 2;
+}
+
+.number {
+  left: 40px;
 }
 

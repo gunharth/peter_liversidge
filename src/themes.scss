@@ -1,3 +1,7 @@
+.card {
+    height: $defaultHeight;
+}
+
 .card--content img {
     &.landscapeLarge {
         height: $defaultHeight;
@@ -60,4 +64,8 @@
         left: -(($defaultHeight - 300) / 2) - 20;
         z-index: 2
     }
+}
+
+.number {
+    left: $defaultSpacing;
 }
