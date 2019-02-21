@@ -18,7 +18,8 @@ $(function () {
   } else {
     setTimeout(function () {
       $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration + "s");
-    }, 3000);
+    }, 3000); // $(window).on('resize', function () {
+    // }
   }
 
   var cardSection = $('#card-section');

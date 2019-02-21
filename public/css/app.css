@@ -124,88 +124,264 @@ body {
   z-index: 3;
 }
 
-.card {
-  height: 700px;
+@media screen and (max-width: 480px) {
+  .card {
+    height: 500px;
+  }
+
+  .card--content img {
+    padding-left: 40px;
+  }
+
+  .card--content img.landscapeLarge {
+    height: 500px;
+    width: 790px;
+  }
+
+  .card--content img.portraitLarge {
+    height: 500px;
+    width: 374px;
+  }
+
+  .card--content img.landscapeMediumLarge,
+  .card--content img.portraitMediumLarge {
+    height: 420px;
+    padding: 40px 0 0 40px;
+  }
+
+  .card--content img.landscapeMedium {
+    height: 260px;
+    padding: 120px 0 0 40px;
+  }
+
+  .card--content img.portraitMedium {
+    height: 340px;
+    padding: 80px 0 0 40px;
+  }
+
+  .card--content img.landscapeSmall {
+    height: 160px;
+    padding: 170px 0 0 40px;
+  }
+
+  .card--content img.portraitSmall {
+    height: 280px;
+    padding: 120px 0 0 40px;
+  }
+
+  .card--content img.landscapeSupersmall {
+    height: 260px;
+    padding: 120px 0 0 40px;
+  }
+
+  .card--content img.portraitSupersmall {
+    height: 160px;
+    padding: 170px 0 0 40px;
+  }
+
+  .card--content img.landscapeBottom {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    bottom: 40px;
+    left: -120px;
+    z-index: 2;
+  }
+
+  .card--content img.landscapeMiddle {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 116px;
+    left: -120px;
+    z-index: 2;
+  }
+
+  .card--content img.landscapeTop {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: 40px;
+    left: -120px;
+    z-index: 2;
+  }
+
+  .number {
+    left: 40px;
+  }
 }
 
-.card--content img {
-  padding-left: 40px;
+@media screen and (min-width: 481px) {
+  .card {
+    height: 700px;
+  }
+
+  .card--content img {
+    padding-left: 40px;
+  }
+
+  .card--content img.landscapeLarge {
+    height: 700px;
+    width: 1050px;
+  }
+
+  .card--content img.portraitLarge {
+    height: 700px;
+    width: 467px;
+  }
+
+  .card--content img.landscapeMediumLarge,
+  .card--content img.portraitMediumLarge {
+    height: 620px;
+    padding: 40px 0 0 40px;
+  }
+
+  .card--content img.landscapeMedium {
+    height: 460px;
+    padding: 120px 0 0 40px;
+  }
+
+  .card--content img.portraitMedium {
+    height: 540px;
+    padding: 80px 0 0 40px;
+  }
+
+  .card--content img.landscapeSmall {
+    height: 360px;
+    padding: 170px 0 0 40px;
+  }
+
+  .card--content img.portraitSmall {
+    height: 480px;
+    padding: 120px 0 0 40px;
+  }
+
+  .card--content img.landscapeSupersmall {
+    height: 460px;
+    padding: 120px 0 0 40px;
+  }
+
+  .card--content img.portraitSupersmall {
+    height: 360px;
+    padding: 170px 0 0 40px;
+  }
+
+  .card--content img.landscapeBottom {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    bottom: 40px;
+    left: -220px;
+    z-index: 2;
+  }
+
+  .card--content img.landscapeMiddle {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 216px;
+    left: -220px;
+    z-index: 2;
+  }
+
+  .card--content img.landscapeTop {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 40px;
+    left: -220px;
+    z-index: 2;
+  }
+
+  .number {
+    left: 40px;
+  }
 }
 
-.card--content img.landscapeLarge {
-  height: 700px;
-  width: 1050px;
-}
+@media screen and (min-width: 1441px) {
+  .card {
+    height: 1000px;
+  }
 
-.card--content img.portraitLarge {
-  height: 700px;
-  width: 467px;
-}
+  .card--content img {
+    padding-left: 40px;
+  }
 
-.card--content img.landscapeMediumLarge,
-.card--content img.portraitMediumLarge {
-  height: 620px;
-  padding: 40px 0 0 40px;
-}
+  .card--content img.landscapeLarge {
+    height: 1000px;
+    width: 1540px;
+  }
 
-.card--content img.landscapeMedium {
-  height: 460px;
-  padding: 120px 0 0 40px;
-}
+  .card--content img.portraitLarge {
+    height: 1000px;
+    width: 667px;
+  }
 
-.card--content img.portraitMedium {
-  height: 540px;
-  padding: 80px 0 0 40px;
-}
+  .card--content img.landscapeMediumLarge,
+  .card--content img.portraitMediumLarge {
+    height: 920px;
+    padding: 40px 0 0 40px;
+  }
 
-.card--content img.landscapeSmall {
-  height: 360px;
-  padding: 170px 0 0 40px;
-}
+  .card--content img.landscapeMedium {
+    height: 760px;
+    padding: 120px 0 0 40px;
+  }
 
-.card--content img.portraitSmall {
-  height: 480px;
-  padding: 120px 0 0 40px;
-}
+  .card--content img.portraitMedium {
+    height: 840px;
+    padding: 80px 0 0 40px;
+  }
 
-.card--content img.landscapeSupersmall {
-  height: 460px;
-  padding: 120px 0 0 40px;
-}
+  .card--content img.landscapeSmall {
+    height: 660px;
+    padding: 170px 0 0 40px;
+  }
 
-.card--content img.portraitSupersmall {
-  height: 360px;
-  padding: 170px 0 0 40px;
-}
+  .card--content img.portraitSmall {
+    height: 780px;
+    padding: 120px 0 0 40px;
+  }
 
-.card--content img.landscapeBottom {
-  position: absolute;
-  width: 400px;
-  height: auto;
-  bottom: 40px;
-  left: -220px;
-  z-index: 2;
-}
+  .card--content img.landscapeSupersmall {
+    height: 760px;
+    padding: 120px 0 0 40px;
+  }
 
-.card--content img.landscapeMiddle {
-  position: absolute;
-  width: 400px;
-  height: auto;
-  top: 216px;
-  left: -220px;
-  z-index: 2;
-}
+  .card--content img.portraitSupersmall {
+    height: 660px;
+    padding: 170px 0 0 40px;
+  }
 
-.card--content img.landscapeTop {
-  position: absolute;
-  width: 400px;
-  height: auto;
-  top: 40px;
-  left: -220px;
-  z-index: 2;
-}
+  .card--content img.landscapeBottom {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    bottom: 40px;
+    left: -370px;
+    z-index: 2;
+  }
 
-.number {
-  left: 40px;
+  .card--content img.landscapeMiddle {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    top: 366px;
+    left: -370px;
+    z-index: 2;
+  }
+
+  .card--content img.landscapeTop {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    top: 40px;
+    left: -370px;
+    z-index: 2;
+  }
+
+  .number {
+    left: 40px;
+  }
 }
 

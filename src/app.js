@@ -10,6 +10,9 @@ $(function () {
         setTimeout(() => {
             $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration+"s");
         }, 3000);
+        // $(window).on('resize', function () {
+
+        // }
     }
 
     let cardSection = $('#card-section');

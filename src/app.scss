@@ -113,13 +113,16 @@ body {
     z-index: 3
 }
 
-$defaultHeight: 700px;
-$defaultLandscapeWidth: 1050px;
-$defaultPortraitWidth: 467px;
-$defaultSpacing: 40px;
-// $defaultHeight: 1000px;
-// $defaultLandscapeWidth: 1540px;
-// $defaultPortraitWidth: 667px;
-// $defaultSpacing: 40px;
-
-@import 'themes.scss';
+@import '_mixins.scss';
+@media screen and (max-width: 480px) {
+    // $defaultHeight, $defaultLandscapeWidth, $defaultPortraitWidth, $defaultSpacing
+    @include theme(500px, 790px, 374px, 40px);
+}
+@media screen and (min-width: 481px) {
+    // $defaultHeight, $defaultLandscapeWidth, $defaultPortraitWidth, $defaultSpacing
+    @include theme(700px, 1050px, 467px, 40px);
+}
+@media screen and (min-width: 1441px) {
+    // $defaultHeight, $defaultLandscapeWidth, $defaultPortraitWidth, $defaultSpacing
+    @include theme(1000px, 1540px, 667px, 40px);
+}
