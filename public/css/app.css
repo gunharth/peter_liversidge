@@ -135,12 +135,12 @@ body {
 
   .card--content img.landscapeLarge {
     height: 500px;
-    width: 790px;
+    width: 750px;
   }
 
   .card--content img.portraitLarge {
     height: 500px;
-    width: 374px;
+    width: 333px;
   }
 
   .card--content img.landscapeMediumLarge,
@@ -309,7 +309,7 @@ body {
 
   .card--content img.landscapeLarge {
     height: 1000px;
-    width: 1540px;
+    width: 1500px;
   }
 
   .card--content img.portraitLarge {

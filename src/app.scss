@@ -115,14 +115,14 @@ body {
 
 @import '_mixins.scss';
 @media screen and (max-width: 480px) {
-    // $defaultHeight, $defaultLandscapeWidth, $defaultPortraitWidth, $defaultSpacing
-    @include theme(500px, 790px, 374px, 40px);
+    // $defaultHeight, $defaultSpacing
+    @include theme(500px, 40px);
 }
 @media screen and (min-width: 481px) {
-    // $defaultHeight, $defaultLandscapeWidth, $defaultPortraitWidth, $defaultSpacing
-    @include theme(700px, 1050px, 467px, 40px);
+    // $defaultHeight, $defaultSpacing
+    @include theme(700px, 40px);
 }
 @media screen and (min-width: 1441px) {
-    // $defaultHeight, $defaultLandscapeWidth, $defaultPortraitWidth, $defaultSpacing
-    @include theme(1000px, 1540px, 667px, 40px);
+    // $defaultHeight, $defaultSpacing
+    @include theme(1000px, 40px);
 }

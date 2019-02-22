@@ -1,4 +1,4 @@
-@mixin theme($defaultHeight, $defaultLandscapeWidth, $defaultPortraitWidth, $defaultSpacing) {
+@mixin theme($defaultHeight, $defaultSpacing) {
     .card {
         height: $defaultHeight;
     }
@@ -6,11 +6,11 @@
         padding-left: $defaultSpacing;
         &.landscapeLarge {
             height: $defaultHeight;
-            width: $defaultLandscapeWidth;
+            width: round($defaultHeight * 1.5);
         }
         &.portraitLarge {
             height: $defaultHeight;
-            width: $defaultPortraitWidth;
+            width: round($defaultHeight / 1.5);
         }
         &.landscapeMediumLarge,
         &.portraitMediumLarge {
