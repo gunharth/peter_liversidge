@@ -37,6 +37,17 @@ $(function () {
         if (landscapeBottom.includes(i)) style = 'landscapeBottom';
 
         cardSection.append(`<div class="card--content"><img data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg" class="${style} lazyload" alt="">${debug ? `<div class="number">${i}</div>` : ''}</div>`);
+
+        // RESPONSIVE cardSection.append(`<div class="card--content">
+        //                         <img
+        //                             data-sizes="auto"
+        //                             data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg"
+        //                             data-srcset="
+        //                                 ${imageURL}/${String(i).padStart(3, '0')}.jpg 480w,
+        //                                 ${imageURL}/${String(i).padStart(3, '0')}.jpg 1440w"
+        //                             class="${style} lazyload" alt="">
+        //                             ${debug ? `<div class="number">${i}</div>` : ''}
+        //                         </div>`);
     }
     $('#card-section').on('click', 'img', function (e) {
         e.preventDefault();
