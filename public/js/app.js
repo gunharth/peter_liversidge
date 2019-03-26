@@ -12,6 +12,12 @@ window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 
 __webpack_require__(/*! lazysizes */ "./node_modules/lazysizes/lazysizes.js");
 
+function moveToCard(num) {
+  var pos = $('#card-' + num).offset();
+  var off = pos.left;
+  $('#card-section').scrollLeft(off);
+}
+
 $(function () {
   if (debug) {
     $('#animation-wrapper').addClass('debug');
@@ -25,7 +31,10 @@ $(function () {
   var cardSection = $('#card-section');
 
   for (var i = 1; i <= numOfImages; i++) {
-    var style = 'landscapeLarge'; // if (landscapeLarge.includes(i)) style = 'landscapeLarge';
+    var zIndex = '';
+    var style = 'landscapeLarge';
+    var outerLeftMargin = '';
+    var outerRightMargin = ''; // if (landscapeLarge.includes(i)) style = 'landscapeLarge';
 
     if (landscapeMediumLarge.includes(i)) style = 'landscapeMediumLarge';
     if (landscapeMedium.includes(i)) style = 'landscapeMedium';
@@ -36,10 +45,44 @@ $(function () {
     if (portraitMediumLarge.includes(i)) style = 'portraitMediumLarge';
     if (portraitSmall.includes(i)) style = 'portraitSmall';
     if (portraitSupersmall.includes(i)) style = 'portraitSupersmall';
-    if (landscapeMiddle.includes(i)) style = 'landscapeMiddle';
-    if (landscapeTop.includes(i)) style = 'landscapeTop';
-    if (landscapeBottom.includes(i)) style = 'landscapeBottom';
-    cardSection.append("<div class=\"card--content\"><img data-src=\"".concat(imageURL, "/").concat(String(i).padStart(3, '0'), ".jpg\" class=\"").concat(style, " lazyload\" alt=\"\">").concat(debug ? "<div class=\"number\">".concat(i, "</div>") : '', "</div>")); // RESPONSIVE cardSection.append(`<div class="card--content">
+    if (overlapTop.includes(i)) style = 'overlapTop';
+    if (overlapTopSmall.includes(i)) style = 'overlapTopSmall';
+    if (overlapMiddle.includes(i)) style = 'overlapMiddle';
+    if (overlapMiddleSmall.includes(i)) style = 'overlapMiddleSmall';
+    if (overlapBottom.includes(i)) style = 'overlapBottom';
+    if (overlapBottomSmall.includes(i)) style = 'overlapBottomSmall'; // if (overlapLandscapeMedium.includes(i)) style = 'overlapLandscapeMedium';
+
+    if (overlapPortraitTop.includes(i)) style = 'overlapPortraitTop';
+    if (overlap25.includes(i)) style += ' overlap25';
+    if (overlap75.includes(i)) style += ' overlap75';
+
+    for (var j = 0; j <= 20; j++) {
+      var space = "left".concat(j * 10, "px");
+      if (eval(space).includes(i)) style += ' ' + space;
+    } // for (let j = 250; j <= 400; j=j+50) {
+    //     let space = `left${j}px`;
+    //     console.log('yes');
+    //     if (eval(space).includes(i)) style += ' ' + space;
+    // }
+
+
+    if (left5px.includes(i)) style += ' left5px';
+    if (left700px.includes(i)) style += ' left700px';
+    if (zIndex2.includes(i)) zIndex += 'zIndex2';
+
+    for (var _j = 0; _j <= 20; _j++) {
+      var _space = "leftMargin".concat(_j * 10, "px");
+
+      if (eval(_space).includes(i)) outerLeftMargin += ' ' + _space;
+    }
+
+    for (var _j2 = 0; _j2 <= 20; _j2++) {
+      var _space2 = "rightMargin".concat(_j2 * 10, "px");
+
+      if (eval(_space2).includes(i)) outerRightMargin += ' ' + _space2;
+    }
+
+    cardSection.append("<div class=\"card--content ".concat(zIndex, " ").concat(outerLeftMargin, " ").concat(outerRightMargin, "\" id=\"card-").concat(i, "\"><img data-src=\"").concat(imageURL, "/").concat(String(i).padStart(3, '0'), ".jpg\" class=\"").concat(style, " lazyload\" alt=\"\">").concat(debug ? "<div class=\"number\">".concat(i, "</div>") : '', "</div>")); // RESPONSIVE cardSection.append(`<div class="card--content">
     //                         <img
     //                             data-sizes="auto"
     //                             data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg"
@@ -70,6 +113,18 @@ $(function () {
   setInterval(function () {
     lazySizes.loader.checkElems();
   }, 1000);
+
+  if (debug) {
+    if (window.location.hash) {
+      var hash = window.location.toString().split('#')[1];
+      console.log(hash);
+      moveToCard(hash);
+    } // $(window).bind('hashchange', function () { //detect hash change
+    //     var hash = window.location.hash.substring(1);
+    //     moveToCard(hash);
+    // });
+
+  }
 });
 
 /***/ }),

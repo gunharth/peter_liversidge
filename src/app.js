@@ -3,7 +3,15 @@
 window.$ = window.jQuery = require('jquery'); // add jquery
 require('lazysizes');
 
+function moveToCard(num) {
+    let pos = $('#card-'+num).offset();
+    let off = pos.left;
+    $('#card-section').scrollLeft(off);
+}
+
 $(function () {
+
+
     if (debug) {
         $('#animation-wrapper').addClass('debug');
     } else {
@@ -18,7 +26,10 @@ $(function () {
     let cardSection = $('#card-section');
 
     for (let i = 1; i <= numOfImages; i++) {
+        let zIndex = '';
         let style = 'landscapeLarge';
+        let outerLeftMargin = '';
+        let outerRightMargin = '';
 
         // if (landscapeLarge.includes(i)) style = 'landscapeLarge';
         if (landscapeMediumLarge.includes(i)) style = 'landscapeMediumLarge';
@@ -32,11 +43,44 @@ $(function () {
         if (portraitSmall.includes(i)) style = 'portraitSmall';
         if (portraitSupersmall.includes(i)) style = 'portraitSupersmall';
 
-        if (landscapeMiddle.includes(i)) style = 'landscapeMiddle';
-        if (landscapeTop.includes(i)) style = 'landscapeTop';
-        if (landscapeBottom.includes(i)) style = 'landscapeBottom';
+        if (overlapTop.includes(i)) style = 'overlapTop';
+        if (overlapTopSmall.includes(i)) style = 'overlapTopSmall';
+        if (overlapMiddle.includes(i)) style = 'overlapMiddle';
+        if (overlapMiddleSmall.includes(i)) style = 'overlapMiddleSmall';
+        if (overlapBottom.includes(i)) style = 'overlapBottom';
+        if (overlapBottomSmall.includes(i)) style = 'overlapBottomSmall';
 
-        cardSection.append(`<div class="card--content"><img data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg" class="${style} lazyload" alt="">${debug ? `<div class="number">${i}</div>` : ''}</div>`);
+        // if (overlapLandscapeMedium.includes(i)) style = 'overlapLandscapeMedium';
+        if (overlapPortraitTop.includes(i)) style = 'overlapPortraitTop';
+
+
+        if (overlap25.includes(i)) style += ' overlap25';
+        if (overlap75.includes(i)) style += ' overlap75';
+
+        for(let j = 0; j <= 20; j++) {
+            let space = `left${j * 10}px`;
+            if (eval(space).includes(i)) style += ' ' + space;
+        }
+        // for (let j = 250; j <= 400; j=j+50) {
+        //     let space = `left${j}px`;
+        //     console.log('yes');
+        //     if (eval(space).includes(i)) style += ' ' + space;
+        // }
+        if (left5px.includes(i)) style += ' left5px';
+        if (left700px.includes(i)) style += ' left700px';
+
+        if (zIndex2.includes(i)) zIndex += 'zIndex2';
+
+        for (let j = 0; j <= 20; j++) {
+            let space = `leftMargin${j * 10}px`;
+            if (eval(space).includes(i)) outerLeftMargin += ' ' + space;
+        }
+        for (let j = 0; j <= 20; j++) {
+            let space = `rightMargin${j * 10}px`;
+            if (eval(space).includes(i)) outerRightMargin += ' ' + space;
+        }
+
+        cardSection.append(`<div class="card--content ${zIndex} ${outerLeftMargin} ${outerRightMargin}" id="card-${i}"><img data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg" class="${style} lazyload" alt="">${debug ? `<div class="number">${i}</div>` : ''}</div>`);
 
         // RESPONSIVE cardSection.append(`<div class="card--content">
         //                         <img
@@ -67,6 +111,16 @@ $(function () {
     });
 
     setInterval(function () { lazySizes.loader.checkElems() }, 1000);
+    if (debug) {
+        if (window.location.hash) {
+            var hash = window.location.toString().split('#')[1];
+            console.log(hash);
+            moveToCard(hash);
+        }
+        // $(window).bind('hashchange', function () { //detect hash change
+        //     var hash = window.location.hash.substring(1);
+        //     moveToCard(hash);
+        // });
+    }
 
-
-})
+});

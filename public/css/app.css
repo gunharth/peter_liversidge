@@ -129,6 +129,178 @@ body {
     height: 500px;
   }
 
+  .card--content.zIndex2 {
+    z-index: 2;
+  }
+
+  .card--content.leftMargin0px {
+    margin-left: -0px;
+  }
+
+  .card--content.leftMargin10px {
+    margin-left: -10px;
+  }
+
+  .card--content.leftMargin20px {
+    margin-left: -20px;
+  }
+
+  .card--content.leftMargin30px {
+    margin-left: -30px;
+  }
+
+  .card--content.leftMargin40px {
+    margin-left: -40px;
+  }
+
+  .card--content.leftMargin50px {
+    margin-left: -50px;
+  }
+
+  .card--content.leftMargin60px {
+    margin-left: -60px;
+  }
+
+  .card--content.leftMargin70px {
+    margin-left: -70px;
+  }
+
+  .card--content.leftMargin80px {
+    margin-left: -80px;
+  }
+
+  .card--content.leftMargin90px {
+    margin-left: -90px;
+  }
+
+  .card--content.leftMargin100px {
+    margin-left: -100px;
+  }
+
+  .card--content.leftMargin110px {
+    margin-left: -110px;
+  }
+
+  .card--content.leftMargin120px {
+    margin-left: -120px;
+  }
+
+  .card--content.leftMargin130px {
+    margin-left: -130px;
+  }
+
+  .card--content.leftMargin140px {
+    margin-left: -140px;
+  }
+
+  .card--content.leftMargin150px {
+    margin-left: -150px;
+  }
+
+  .card--content.leftMargin160px {
+    margin-left: -160px;
+  }
+
+  .card--content.leftMargin170px {
+    margin-left: -170px;
+  }
+
+  .card--content.leftMargin180px {
+    margin-left: -180px;
+  }
+
+  .card--content.leftMargin190px {
+    margin-left: -190px;
+  }
+
+  .card--content.leftMargin200px {
+    margin-left: -200px;
+  }
+
+  .card--content.rightMargin0px {
+    margin-right: -0px;
+  }
+
+  .card--content.rightMargin10px {
+    margin-right: -10px;
+  }
+
+  .card--content.rightMargin20px {
+    margin-right: -20px;
+  }
+
+  .card--content.rightMargin30px {
+    margin-right: -30px;
+  }
+
+  .card--content.rightMargin40px {
+    margin-right: -40px;
+  }
+
+  .card--content.rightMargin50px {
+    margin-right: -50px;
+  }
+
+  .card--content.rightMargin60px {
+    margin-right: -60px;
+  }
+
+  .card--content.rightMargin70px {
+    margin-right: -70px;
+  }
+
+  .card--content.rightMargin80px {
+    margin-right: -80px;
+  }
+
+  .card--content.rightMargin90px {
+    margin-right: -90px;
+  }
+
+  .card--content.rightMargin100px {
+    margin-right: -100px;
+  }
+
+  .card--content.rightMargin110px {
+    margin-right: -110px;
+  }
+
+  .card--content.rightMargin120px {
+    margin-right: -120px;
+  }
+
+  .card--content.rightMargin130px {
+    margin-right: -130px;
+  }
+
+  .card--content.rightMargin140px {
+    margin-right: -140px;
+  }
+
+  .card--content.rightMargin150px {
+    margin-right: -150px;
+  }
+
+  .card--content.rightMargin160px {
+    margin-right: -160px;
+  }
+
+  .card--content.rightMargin170px {
+    margin-right: -170px;
+  }
+
+  .card--content.rightMargin180px {
+    margin-right: -180px;
+  }
+
+  .card--content.rightMargin190px {
+    margin-right: -190px;
+  }
+
+  .card--content.rightMargin200px {
+    margin-right: -200px;
+  }
+
   .card--content img {
     padding-left: 40px;
   }
@@ -179,31 +351,239 @@ body {
     padding: 170px 0 0 40px;
   }
 
-  .card--content img.landscapeBottom {
+  .card--content img.overlapTop {
     position: absolute;
-    width: 200px;
+    width: 375px;
     height: auto;
-    bottom: 40px;
-    left: -120px;
-    z-index: 2;
+    top: 50px;
+    left: -147.5px;
+    z-index: 1;
+    padding-left: 0;
   }
 
-  .card--content img.landscapeMiddle {
+  .card--content img.overlapTopSmall {
     position: absolute;
-    width: 200px;
+    width: 281.25px;
     height: auto;
-    top: 116px;
-    left: -120px;
-    z-index: 2;
+    top: 50px;
+    left: -100.625px;
+    z-index: 1;
+    padding-left: 0;
   }
 
-  .card--content img.landscapeTop {
+  .card--content img.overlapTopSmall.overlap25 {
+    left: -71px;
+  }
+
+  .card--content img.overlapTopSmall.overlap75 {
+    left: -211px;
+  }
+
+  .card--content img.overlapMiddle {
     position: absolute;
-    width: 200px;
+    width: 375px;
     height: auto;
-    top: 40px;
-    left: -120px;
-    z-index: 2;
+    top: 125px;
+    left: -147.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapMiddleSmall {
+    position: absolute;
+    width: 281.25px;
+    height: auto;
+    top: 156px;
+    left: -100.625px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapMiddleSmall.overlap25 {
+    left: -71px;
+  }
+
+  .card--content img.overlapMiddleSmall.overlap75 {
+    left: -211px;
+  }
+
+  .card--content img.overlapBottom {
+    position: absolute;
+    width: 375px;
+    height: auto;
+    bottom: 50px;
+    left: -147.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapBottomSmall {
+    position: absolute;
+    width: 281.25px;
+    height: auto;
+    bottom: 50px;
+    left: -100.625px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapBottomSmall.overlap25 {
+    left: -71px;
+  }
+
+  .card--content img.overlapBottomSmall.overlap75 {
+    left: -211px;
+  }
+
+  .card--content img.overlapLandscapeMedium {
+    height: 260px;
+    width: 173px;
+    position: absolute;
+    top: 192px;
+    left: -46.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapPortraitTop {
+    position: absolute;
+    width: 333px;
+    height: auto;
+    left: -126.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapPortraitTop.overlap25 {
+    left: -84px;
+  }
+
+  .card--content img.overlapPortraitTop.overlap75 {
+    left: -250px;
+  }
+
+  .card--content img.overlap25 {
+    left: -94px;
+  }
+
+  .card--content img.overlap75 {
+    left: -282px;
+  }
+
+  .card--content img.left0px {
+    padding-left: 0px;
+  }
+
+  .card--content img.left10px {
+    padding-left: 10px;
+  }
+
+  .card--content img.left20px {
+    padding-left: 20px;
+  }
+
+  .card--content img.left30px {
+    padding-left: 30px;
+  }
+
+  .card--content img.left40px {
+    padding-left: 40px;
+  }
+
+  .card--content img.left50px {
+    padding-left: 50px;
+  }
+
+  .card--content img.left60px {
+    padding-left: 60px;
+  }
+
+  .card--content img.left70px {
+    padding-left: 70px;
+  }
+
+  .card--content img.left80px {
+    padding-left: 80px;
+  }
+
+  .card--content img.left90px {
+    padding-left: 90px;
+  }
+
+  .card--content img.left100px {
+    padding-left: 100px;
+  }
+
+  .card--content img.left110px {
+    padding-left: 110px;
+  }
+
+  .card--content img.left120px {
+    padding-left: 120px;
+  }
+
+  .card--content img.left130px {
+    padding-left: 130px;
+  }
+
+  .card--content img.left140px {
+    padding-left: 140px;
+  }
+
+  .card--content img.left150px {
+    padding-left: 150px;
+  }
+
+  .card--content img.left160px {
+    padding-left: 160px;
+  }
+
+  .card--content img.left170px {
+    padding-left: 170px;
+  }
+
+  .card--content img.left180px {
+    padding-left: 180px;
+  }
+
+  .card--content img.left190px {
+    padding-left: 190px;
+  }
+
+  .card--content img.left200px {
+    padding-left: 200px;
+  }
+
+  .card--content img.left250px {
+    padding-left: 250px;
+  }
+
+  .card--content img.left200px {
+    padding-left: 200px;
+  }
+
+  .card--content img.left350px {
+    padding-left: 350px;
+  }
+
+  .card--content img.left300px {
+    padding-left: 300px;
+  }
+
+  .card--content img.left450px {
+    padding-left: 450px;
+  }
+
+  .card--content img.left400px {
+    padding-left: 400px;
+  }
+
+  .card--content img.left5px {
+    padding-left: 5px;
+  }
+
+  .card--content img.left700px {
+    padding-left: 700px;
   }
 
   .number {
@@ -214,6 +594,178 @@ body {
 @media screen and (min-width: 481px) {
   .card {
     height: 700px;
+  }
+
+  .card--content.zIndex2 {
+    z-index: 2;
+  }
+
+  .card--content.leftMargin0px {
+    margin-left: -0px;
+  }
+
+  .card--content.leftMargin10px {
+    margin-left: -10px;
+  }
+
+  .card--content.leftMargin20px {
+    margin-left: -20px;
+  }
+
+  .card--content.leftMargin30px {
+    margin-left: -30px;
+  }
+
+  .card--content.leftMargin40px {
+    margin-left: -40px;
+  }
+
+  .card--content.leftMargin50px {
+    margin-left: -50px;
+  }
+
+  .card--content.leftMargin60px {
+    margin-left: -60px;
+  }
+
+  .card--content.leftMargin70px {
+    margin-left: -70px;
+  }
+
+  .card--content.leftMargin80px {
+    margin-left: -80px;
+  }
+
+  .card--content.leftMargin90px {
+    margin-left: -90px;
+  }
+
+  .card--content.leftMargin100px {
+    margin-left: -100px;
+  }
+
+  .card--content.leftMargin110px {
+    margin-left: -110px;
+  }
+
+  .card--content.leftMargin120px {
+    margin-left: -120px;
+  }
+
+  .card--content.leftMargin130px {
+    margin-left: -130px;
+  }
+
+  .card--content.leftMargin140px {
+    margin-left: -140px;
+  }
+
+  .card--content.leftMargin150px {
+    margin-left: -150px;
+  }
+
+  .card--content.leftMargin160px {
+    margin-left: -160px;
+  }
+
+  .card--content.leftMargin170px {
+    margin-left: -170px;
+  }
+
+  .card--content.leftMargin180px {
+    margin-left: -180px;
+  }
+
+  .card--content.leftMargin190px {
+    margin-left: -190px;
+  }
+
+  .card--content.leftMargin200px {
+    margin-left: -200px;
+  }
+
+  .card--content.rightMargin0px {
+    margin-right: -0px;
+  }
+
+  .card--content.rightMargin10px {
+    margin-right: -10px;
+  }
+
+  .card--content.rightMargin20px {
+    margin-right: -20px;
+  }
+
+  .card--content.rightMargin30px {
+    margin-right: -30px;
+  }
+
+  .card--content.rightMargin40px {
+    margin-right: -40px;
+  }
+
+  .card--content.rightMargin50px {
+    margin-right: -50px;
+  }
+
+  .card--content.rightMargin60px {
+    margin-right: -60px;
+  }
+
+  .card--content.rightMargin70px {
+    margin-right: -70px;
+  }
+
+  .card--content.rightMargin80px {
+    margin-right: -80px;
+  }
+
+  .card--content.rightMargin90px {
+    margin-right: -90px;
+  }
+
+  .card--content.rightMargin100px {
+    margin-right: -100px;
+  }
+
+  .card--content.rightMargin110px {
+    margin-right: -110px;
+  }
+
+  .card--content.rightMargin120px {
+    margin-right: -120px;
+  }
+
+  .card--content.rightMargin130px {
+    margin-right: -130px;
+  }
+
+  .card--content.rightMargin140px {
+    margin-right: -140px;
+  }
+
+  .card--content.rightMargin150px {
+    margin-right: -150px;
+  }
+
+  .card--content.rightMargin160px {
+    margin-right: -160px;
+  }
+
+  .card--content.rightMargin170px {
+    margin-right: -170px;
+  }
+
+  .card--content.rightMargin180px {
+    margin-right: -180px;
+  }
+
+  .card--content.rightMargin190px {
+    margin-right: -190px;
+  }
+
+  .card--content.rightMargin200px {
+    margin-right: -200px;
   }
 
   .card--content img {
@@ -266,31 +818,239 @@ body {
     padding: 170px 0 0 40px;
   }
 
-  .card--content img.landscapeBottom {
+  .card--content img.overlapTop {
     position: absolute;
-    width: 400px;
+    width: 525px;
     height: auto;
-    bottom: 40px;
-    left: -220px;
-    z-index: 2;
+    top: 50px;
+    left: -222.5px;
+    z-index: 1;
+    padding-left: 0;
   }
 
-  .card--content img.landscapeMiddle {
+  .card--content img.overlapTopSmall {
     position: absolute;
-    width: 400px;
+    width: 393.75px;
     height: auto;
-    top: 216px;
-    left: -220px;
-    z-index: 2;
+    top: 50px;
+    left: -156.875px;
+    z-index: 1;
+    padding-left: 0;
   }
 
-  .card--content img.landscapeTop {
+  .card--content img.overlapTopSmall.overlap25 {
+    left: -99px;
+  }
+
+  .card--content img.overlapTopSmall.overlap75 {
+    left: -296px;
+  }
+
+  .card--content img.overlapMiddle {
     position: absolute;
-    width: 400px;
+    width: 525px;
     height: auto;
-    top: 40px;
-    left: -220px;
-    z-index: 2;
+    top: 175px;
+    left: -222.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapMiddleSmall {
+    position: absolute;
+    width: 393.75px;
+    height: auto;
+    top: 218px;
+    left: -156.875px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapMiddleSmall.overlap25 {
+    left: -99px;
+  }
+
+  .card--content img.overlapMiddleSmall.overlap75 {
+    left: -296px;
+  }
+
+  .card--content img.overlapBottom {
+    position: absolute;
+    width: 525px;
+    height: auto;
+    bottom: 50px;
+    left: -222.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapBottomSmall {
+    position: absolute;
+    width: 393.75px;
+    height: auto;
+    bottom: 50px;
+    left: -156.875px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapBottomSmall.overlap25 {
+    left: -99px;
+  }
+
+  .card--content img.overlapBottomSmall.overlap75 {
+    left: -296px;
+  }
+
+  .card--content img.overlapLandscapeMedium {
+    height: 460px;
+    width: 307px;
+    position: absolute;
+    top: 247px;
+    left: -113.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapPortraitTop {
+    position: absolute;
+    width: 467px;
+    height: auto;
+    left: -193.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapPortraitTop.overlap25 {
+    left: -117px;
+  }
+
+  .card--content img.overlapPortraitTop.overlap75 {
+    left: -351px;
+  }
+
+  .card--content img.overlap25 {
+    left: -132px;
+  }
+
+  .card--content img.overlap75 {
+    left: -394px;
+  }
+
+  .card--content img.left0px {
+    padding-left: 0px;
+  }
+
+  .card--content img.left10px {
+    padding-left: 10px;
+  }
+
+  .card--content img.left20px {
+    padding-left: 20px;
+  }
+
+  .card--content img.left30px {
+    padding-left: 30px;
+  }
+
+  .card--content img.left40px {
+    padding-left: 40px;
+  }
+
+  .card--content img.left50px {
+    padding-left: 50px;
+  }
+
+  .card--content img.left60px {
+    padding-left: 60px;
+  }
+
+  .card--content img.left70px {
+    padding-left: 70px;
+  }
+
+  .card--content img.left80px {
+    padding-left: 80px;
+  }
+
+  .card--content img.left90px {
+    padding-left: 90px;
+  }
+
+  .card--content img.left100px {
+    padding-left: 100px;
+  }
+
+  .card--content img.left110px {
+    padding-left: 110px;
+  }
+
+  .card--content img.left120px {
+    padding-left: 120px;
+  }
+
+  .card--content img.left130px {
+    padding-left: 130px;
+  }
+
+  .card--content img.left140px {
+    padding-left: 140px;
+  }
+
+  .card--content img.left150px {
+    padding-left: 150px;
+  }
+
+  .card--content img.left160px {
+    padding-left: 160px;
+  }
+
+  .card--content img.left170px {
+    padding-left: 170px;
+  }
+
+  .card--content img.left180px {
+    padding-left: 180px;
+  }
+
+  .card--content img.left190px {
+    padding-left: 190px;
+  }
+
+  .card--content img.left200px {
+    padding-left: 200px;
+  }
+
+  .card--content img.left250px {
+    padding-left: 250px;
+  }
+
+  .card--content img.left200px {
+    padding-left: 200px;
+  }
+
+  .card--content img.left350px {
+    padding-left: 350px;
+  }
+
+  .card--content img.left300px {
+    padding-left: 300px;
+  }
+
+  .card--content img.left450px {
+    padding-left: 450px;
+  }
+
+  .card--content img.left400px {
+    padding-left: 400px;
+  }
+
+  .card--content img.left5px {
+    padding-left: 5px;
+  }
+
+  .card--content img.left700px {
+    padding-left: 700px;
   }
 
   .number {
@@ -301,6 +1061,178 @@ body {
 @media screen and (min-width: 1441px) {
   .card {
     height: 1000px;
+  }
+
+  .card--content.zIndex2 {
+    z-index: 2;
+  }
+
+  .card--content.leftMargin0px {
+    margin-left: -0px;
+  }
+
+  .card--content.leftMargin10px {
+    margin-left: -10px;
+  }
+
+  .card--content.leftMargin20px {
+    margin-left: -20px;
+  }
+
+  .card--content.leftMargin30px {
+    margin-left: -30px;
+  }
+
+  .card--content.leftMargin40px {
+    margin-left: -40px;
+  }
+
+  .card--content.leftMargin50px {
+    margin-left: -50px;
+  }
+
+  .card--content.leftMargin60px {
+    margin-left: -60px;
+  }
+
+  .card--content.leftMargin70px {
+    margin-left: -70px;
+  }
+
+  .card--content.leftMargin80px {
+    margin-left: -80px;
+  }
+
+  .card--content.leftMargin90px {
+    margin-left: -90px;
+  }
+
+  .card--content.leftMargin100px {
+    margin-left: -100px;
+  }
+
+  .card--content.leftMargin110px {
+    margin-left: -110px;
+  }
+
+  .card--content.leftMargin120px {
+    margin-left: -120px;
+  }
+
+  .card--content.leftMargin130px {
+    margin-left: -130px;
+  }
+
+  .card--content.leftMargin140px {
+    margin-left: -140px;
+  }
+
+  .card--content.leftMargin150px {
+    margin-left: -150px;
+  }
+
+  .card--content.leftMargin160px {
+    margin-left: -160px;
+  }
+
+  .card--content.leftMargin170px {
+    margin-left: -170px;
+  }
+
+  .card--content.leftMargin180px {
+    margin-left: -180px;
+  }
+
+  .card--content.leftMargin190px {
+    margin-left: -190px;
+  }
+
+  .card--content.leftMargin200px {
+    margin-left: -200px;
+  }
+
+  .card--content.rightMargin0px {
+    margin-right: -0px;
+  }
+
+  .card--content.rightMargin10px {
+    margin-right: -10px;
+  }
+
+  .card--content.rightMargin20px {
+    margin-right: -20px;
+  }
+
+  .card--content.rightMargin30px {
+    margin-right: -30px;
+  }
+
+  .card--content.rightMargin40px {
+    margin-right: -40px;
+  }
+
+  .card--content.rightMargin50px {
+    margin-right: -50px;
+  }
+
+  .card--content.rightMargin60px {
+    margin-right: -60px;
+  }
+
+  .card--content.rightMargin70px {
+    margin-right: -70px;
+  }
+
+  .card--content.rightMargin80px {
+    margin-right: -80px;
+  }
+
+  .card--content.rightMargin90px {
+    margin-right: -90px;
+  }
+
+  .card--content.rightMargin100px {
+    margin-right: -100px;
+  }
+
+  .card--content.rightMargin110px {
+    margin-right: -110px;
+  }
+
+  .card--content.rightMargin120px {
+    margin-right: -120px;
+  }
+
+  .card--content.rightMargin130px {
+    margin-right: -130px;
+  }
+
+  .card--content.rightMargin140px {
+    margin-right: -140px;
+  }
+
+  .card--content.rightMargin150px {
+    margin-right: -150px;
+  }
+
+  .card--content.rightMargin160px {
+    margin-right: -160px;
+  }
+
+  .card--content.rightMargin170px {
+    margin-right: -170px;
+  }
+
+  .card--content.rightMargin180px {
+    margin-right: -180px;
+  }
+
+  .card--content.rightMargin190px {
+    margin-right: -190px;
+  }
+
+  .card--content.rightMargin200px {
+    margin-right: -200px;
   }
 
   .card--content img {
@@ -353,31 +1285,239 @@ body {
     padding: 170px 0 0 40px;
   }
 
-  .card--content img.landscapeBottom {
+  .card--content img.overlapTop {
     position: absolute;
-    width: 700px;
+    width: 750px;
     height: auto;
-    bottom: 40px;
-    left: -370px;
-    z-index: 2;
+    top: 50px;
+    left: -335px;
+    z-index: 1;
+    padding-left: 0;
   }
 
-  .card--content img.landscapeMiddle {
+  .card--content img.overlapTopSmall {
     position: absolute;
-    width: 700px;
+    width: 562.5px;
     height: auto;
-    top: 366px;
-    left: -370px;
-    z-index: 2;
+    top: 50px;
+    left: -241.25px;
+    z-index: 1;
+    padding-left: 0;
   }
 
-  .card--content img.landscapeTop {
+  .card--content img.overlapTopSmall.overlap25 {
+    left: -141px;
+  }
+
+  .card--content img.overlapTopSmall.overlap75 {
+    left: -422px;
+  }
+
+  .card--content img.overlapMiddle {
     position: absolute;
-    width: 700px;
+    width: 750px;
     height: auto;
-    top: 40px;
-    left: -370px;
-    z-index: 2;
+    top: 250px;
+    left: -335px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapMiddleSmall {
+    position: absolute;
+    width: 562.5px;
+    height: auto;
+    top: 312px;
+    left: -241.25px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapMiddleSmall.overlap25 {
+    left: -141px;
+  }
+
+  .card--content img.overlapMiddleSmall.overlap75 {
+    left: -422px;
+  }
+
+  .card--content img.overlapBottom {
+    position: absolute;
+    width: 750px;
+    height: auto;
+    bottom: 50px;
+    left: -335px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapBottomSmall {
+    position: absolute;
+    width: 562.5px;
+    height: auto;
+    bottom: 50px;
+    left: -241.25px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapBottomSmall.overlap25 {
+    left: -141px;
+  }
+
+  .card--content img.overlapBottomSmall.overlap75 {
+    left: -422px;
+  }
+
+  .card--content img.overlapLandscapeMedium {
+    height: 760px;
+    width: 507px;
+    position: absolute;
+    top: 331px;
+    left: -213.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapPortraitTop {
+    position: absolute;
+    width: 667px;
+    height: auto;
+    left: -293.5px;
+    z-index: 1;
+    padding-left: 0;
+  }
+
+  .card--content img.overlapPortraitTop.overlap25 {
+    left: -167px;
+  }
+
+  .card--content img.overlapPortraitTop.overlap75 {
+    left: -501px;
+  }
+
+  .card--content img.overlap25 {
+    left: -188px;
+  }
+
+  .card--content img.overlap75 {
+    left: -563px;
+  }
+
+  .card--content img.left0px {
+    padding-left: 0px;
+  }
+
+  .card--content img.left10px {
+    padding-left: 10px;
+  }
+
+  .card--content img.left20px {
+    padding-left: 20px;
+  }
+
+  .card--content img.left30px {
+    padding-left: 30px;
+  }
+
+  .card--content img.left40px {
+    padding-left: 40px;
+  }
+
+  .card--content img.left50px {
+    padding-left: 50px;
+  }
+
+  .card--content img.left60px {
+    padding-left: 60px;
+  }
+
+  .card--content img.left70px {
+    padding-left: 70px;
+  }
+
+  .card--content img.left80px {
+    padding-left: 80px;
+  }
+
+  .card--content img.left90px {
+    padding-left: 90px;
+  }
+
+  .card--content img.left100px {
+    padding-left: 100px;
+  }
+
+  .card--content img.left110px {
+    padding-left: 110px;
+  }
+
+  .card--content img.left120px {
+    padding-left: 120px;
+  }
+
+  .card--content img.left130px {
+    padding-left: 130px;
+  }
+
+  .card--content img.left140px {
+    padding-left: 140px;
+  }
+
+  .card--content img.left150px {
+    padding-left: 150px;
+  }
+
+  .card--content img.left160px {
+    padding-left: 160px;
+  }
+
+  .card--content img.left170px {
+    padding-left: 170px;
+  }
+
+  .card--content img.left180px {
+    padding-left: 180px;
+  }
+
+  .card--content img.left190px {
+    padding-left: 190px;
+  }
+
+  .card--content img.left200px {
+    padding-left: 200px;
+  }
+
+  .card--content img.left250px {
+    padding-left: 250px;
+  }
+
+  .card--content img.left200px {
+    padding-left: 200px;
+  }
+
+  .card--content img.left350px {
+    padding-left: 350px;
+  }
+
+  .card--content img.left300px {
+    padding-left: 300px;
+  }
+
+  .card--content img.left450px {
+    padding-left: 450px;
+  }
+
+  .card--content img.left400px {
+    padding-left: 400px;
+  }
+
+  .card--content img.left5px {
+    padding-left: 5px;
+  }
+
+  .card--content img.left700px {
+    padding-left: 700px;
   }
 
   .number {

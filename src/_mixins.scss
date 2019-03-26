@@ -2,6 +2,21 @@
     .card {
         height: $defaultHeight;
     }
+    .card--content {
+        &.zIndex2 {
+            z-index: 2;
+        }
+        @for $i from 0 through 20 {
+            &.leftMargin#{$i * 10}px {
+                margin-left: -#{$i * 10}px;
+            }
+        }
+        @for $i from 0 through 20 {
+            &.rightMargin#{$i * 10}px {
+                margin-right: -#{$i * 10}px;
+            }
+        }
+    }
     .card--content img {
         padding-left: $defaultSpacing;
         &.landscapeLarge {
@@ -41,29 +56,131 @@
             height: $defaultHeight - $defaultSpacing*8 - 20;
             padding: 170px 0 0 $defaultSpacing;
         }
-        &.landscapeBottom {
+        $imgWidth: $defaultHeight - ceil($defaultHeight * 0.25);
+        $smallImgWidth: $imgWidth * 0.75;
+        &.overlapTop {
             position: absolute;
-            width: $defaultHeight - 300;
+            width: $imgWidth;
             height: auto;
-            bottom: $defaultSpacing;
-            left: -(($defaultHeight - 300) / 2) - 20;
-            z-index: 2;
+            top: $defaultSpacing +10;
+            left: - ($imgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
         }
-        &.landscapeMiddle {
+        &.overlapTopSmall {
             position: absolute;
-            width: $defaultHeight - 300;
+            width: $smallImgWidth;
             height: auto;
-            top: $defaultHeight/2 - 134;
-            left: -(($defaultHeight - 300) / 2) - 20;
-            z-index: 2;
+            top: $defaultSpacing +10;
+            left: - ($smallImgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+            &.overlap25 {
+                left: - ceil($smallImgWidth * 0.25);
+            }
+            &.overlap75 {
+                left: - ceil($smallImgWidth * 0.75);
+            }
         }
-        &.landscapeTop {
+        &.overlapMiddle {
             position: absolute;
-            width: $defaultHeight - 300;
+            width: $imgWidth;
             height: auto;
-            top: $defaultSpacing;
-            left: -(($defaultHeight - 300) / 2) - 20;
-            z-index: 2
+            top: $defaultHeight / 2 - ceil(($imgWidth / 1.5) / 2); // top: $defaultHeight/3; // left: -(($defaultHeight - 300) / 2) - 20;
+            left: - ($imgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+        }
+        &.overlapMiddleSmall {
+            position: absolute;
+            width: $smallImgWidth;
+            height: auto;
+            top: $defaultHeight / 2 - ceil(($smallImgWidth / 1.5) / 2);
+            left: - ($smallImgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+            &.overlap25 {
+                left: - ceil($smallImgWidth * 0.25);
+            }
+            &.overlap75 {
+                left: - ceil($smallImgWidth * 0.75);
+            }
+        }
+        &.overlapBottom {
+            position: absolute;
+            width: $imgWidth;
+            height: auto;
+            bottom: $defaultSpacing + 10;
+            left: - ($imgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+        }
+        &.overlapBottomSmall {
+            position: absolute;
+            width: $smallImgWidth;
+            height: auto;
+            bottom: $defaultSpacing + 10;
+            left: - ($smallImgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+            &.overlap25 {
+                left: - ceil($smallImgWidth * 0.25);
+            }
+            &.overlap75 {
+                left: - ceil($smallImgWidth * 0.75);
+            }
+        }
+        $overlapLandscapeMediumHeight: $defaultHeight - $defaultSpacing*6;
+        $overlapLandscapeMediumWidth: round($overlapLandscapeMediumHeight / 1.5);
+        &.overlapLandscapeMedium {
+            height: $overlapLandscapeMediumHeight;
+            width: $overlapLandscapeMediumWidth; // padding: $defaultSpacing*3 0 0 $defaultSpacing;
+            position: absolute; // width: $imgWidth;
+            // height: auto;
+            top: $defaultHeight / 2 - ceil(($overlapLandscapeMediumWidth / 1.5) / 2); // top: $defaultHeight/3; // left: -(($defaultHeight - 300) / 2) - 20;
+            left: - ($overlapLandscapeMediumWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+        }
+        $portraitWidth: round($defaultHeight / 1.5);
+        &.overlapPortraitTop {
+            position: absolute;
+            width: $portraitWidth;
+            height: auto; // bottom: $defaultSpacing + 10;
+            left: - ($portraitWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+            &.overlap25 {
+                left: - ceil($portraitWidth * 0.25);
+            }
+            &.overlap75 {
+                left: - ceil($portraitWidth * 0.75);
+            }
+        }
+        &.overlap25 {
+            left: - ceil($imgWidth * 0.25);
+        }
+        &.overlap75 {
+            left: - ceil($imgWidth * 0.75);
+        }
+        @for $i from 0 through 20 {
+            &.left#{$i * 10}px {
+                padding-left: #{$i * 10}px;
+            }
+        }
+        @for $i from 2 through 4 {
+            &.left#{$i * 100 + 50}px {
+                padding-left: #{$i * 100 + 50}px;
+            }
+            &.left#{$i * 100}px {
+                padding-left: #{$i * 100}px;
+            }
+        }
+        &.left5px {
+            padding-left: 5px;
+        }
+        &.left700px {
+            padding-left: 700px;
         }
     }
     .number {
