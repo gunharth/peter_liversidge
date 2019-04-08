@@ -23,7 +23,10 @@ mix.webpackConfig({
 mix.setPublicPath('public');
 
 // mix.js('src/app.js', 'public/').sass('src/app.scss', 'dist/');
-mix.js('src/app.js', 'public/js').sass('src/app.scss', 'public/css').extract();
+mix.js('src/app.js', 'public/js');
+mix.sass('src/app.scss', 'public/css').options({
+    processCssUrls: false
+}).extract();
 mix.copy('src/index.html', 'public/index.html');
 
 // mix.browserSync({

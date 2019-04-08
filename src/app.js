@@ -11,16 +11,15 @@ function moveToCard(num) {
 
 $(function () {
 
-
     if (debug) {
         $('#animation-wrapper').addClass('debug');
+        $('#intro-overlay').hide();
     } else {
-        setTimeout(() => {
-            $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration+"s");
-        }, 3000);
-        // $(window).on('resize', function () {
+        $('#intro-overlay-loader').fadeOut();
 
-        // }
+        // setTimeout(() => {
+        //     $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration+"s");
+        // }, 3000);
     }
 
     let cardSection = $('#card-section');
@@ -68,6 +67,7 @@ $(function () {
         // }
         if (left5px.includes(i)) style += ' left5px';
         if (left700px.includes(i)) style += ' left700px';
+        if (right1000px.includes(i)) style += ' right1000px';
 
         if (zIndex2.includes(i)) zIndex += 'zIndex2';
 
@@ -80,7 +80,7 @@ $(function () {
             if (eval(space).includes(i)) outerRightMargin += ' ' + space;
         }
 
-        cardSection.append(`<div class="card--content ${zIndex} ${outerLeftMargin} ${outerRightMargin}" id="card-${i}"><img data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg" class="${style} lazyload" alt="">${debug ? `<div class="number">${i}</div>` : ''}</div>`);
+        cardSection.append(`<div class="card--content ${zIndex} ${outerLeftMargin} ${outerRightMargin}"${debug ? ` id="card-${i}"` : ''}><img data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg" src="images/transparent.png" class="${style} lazyload" alt="">${debug ? `<div class="number">${i}</div>` : ''}</div> `);
 
         // RESPONSIVE cardSection.append(`<div class="card--content">
         //                         <img
@@ -110,7 +110,30 @@ $(function () {
         if (!debug)  $('#animation-wrapper').toggleClass('paused');
     });
 
-    setInterval(function () { lazySizes.loader.checkElems() }, 1000);
+    $('#intro-overlay-image').on('click', function (e) {
+        e.preventDefault();
+        $('#intro-overlay-content').css('background-image', 'none').addClass('textview');
+        $('#intro-overlay-text').fadeIn();
+    });
+    $('#backToHome').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('#intro-overlay-content').removeAttr('style').removeClass('textview');
+        $('#intro-overlay-text').hide();
+    });
+    $('#intro-overlay-content').on('click', '#startSlideshow', function (e) {
+        if($(e.target).parents().hasClass('textview')) {
+            e.preventDefault();
+            e.stopPropagation();
+            $('#intro-overlay').fadeOut(1000, function() {
+                setTimeout(() => {
+                    $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration+"s");
+                }, 2000);
+            });
+        }
+    });
+
+    setInterval(function () { lazySizes.loader.checkElems() }, 300);
     if (debug) {
         if (window.location.hash) {
             var hash = window.location.toString().split('#')[1];

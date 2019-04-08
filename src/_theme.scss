@@ -1,0 +1,426 @@
+@mixin theme($defaultHeight, $defaultSpacing, $scaling) {
+    .card {
+        height: $defaultHeight;
+    }
+
+    .card--content {
+        &.zIndex2 {
+            z-index: 2;
+        }
+
+        @for $i from 0 through 20 {
+            &.leftMargin#{$i * 10}px {
+                margin-left: -#{($i * 10) / $scaling}px;
+            }
+        }
+
+        @for $i from 0 through 20 {
+            &.rightMargin#{$i * 10}px {
+                margin-right: -#{($i * 10) / $scaling}px;
+            }
+        }
+    }
+
+    .card--content img {
+        padding-left: $defaultSpacing;
+
+        &.landscapeLarge {
+            height: $defaultHeight;
+            width: round($defaultHeight * 1.5);
+        }
+
+        &.portraitLarge {
+            height: $defaultHeight;
+            width: round($defaultHeight / 1.5);
+        }
+
+        &.landscapeMediumLarge {
+            height: $defaultHeight - $defaultSpacing*2;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 630px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 930px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 1380px;
+            }
+
+            padding: $defaultSpacing 0 0 $defaultSpacing;
+        }
+
+        &.portraitMediumLarge {
+            height: $defaultHeight - $defaultSpacing*2;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 280px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 414px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 614px;
+            }
+
+            padding: $defaultSpacing 0 0 $defaultSpacing;
+        }
+
+        &.landscapeMedium {
+            height: $defaultHeight - $defaultSpacing*6;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 390px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 690x;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 1140px;
+            }
+
+            padding: $defaultSpacing*3 0 0 $defaultSpacing;
+        }
+
+        &.portraitMedium {
+            height: $defaultHeight - $defaultSpacing*4;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 220px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 349px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 542px;
+            }
+
+            padding: $defaultSpacing*2 0 0 $defaultSpacing;
+        }
+
+        &.landscapeSmall {
+            height: $defaultHeight - 340;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 240px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 540x;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 990px;
+            }
+
+            padding: $defaultSpacing*4+10 0 0 $defaultSpacing;
+        }
+
+        &.portraitSmall {
+            height: $defaultHeight - $defaultSpacing*5 - 20;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 187px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 320px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 520px;
+            }
+
+            padding: 120px 0 0 $defaultSpacing;
+        }
+
+        &.landscapeSupersmall {
+            height: $defaultHeight - $defaultSpacing*6;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 390px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 690px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 1140px;
+            }
+
+            padding: $defaultSpacing*3 0 0 $defaultSpacing;
+        }
+
+        &.portraitSupersmall {
+            height: $defaultHeight - $defaultSpacing*8 - 20;
+
+            @media screen and (max-width: $breakpoint-small) {
+                width: 107px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                width: 240px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                width: 440px;
+            }
+
+
+            padding: 170px 0 0 $defaultSpacing;
+        }
+
+        $imgWidth: $defaultHeight - ceil($defaultHeight * 0.25);
+        $smallImgWidth: $imgWidth * 0.75;
+
+        &.overlapTop {
+            position: absolute;
+            width: $imgWidth;
+            // height: auto;
+            top: $defaultSpacing +10;
+            left: - ($imgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+
+            @media screen and (max-width: $breakpoint-small) {
+                height: 250px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 350px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                height: 500px;
+            }
+        }
+
+        &.overlapTopSmall {
+            position: absolute;
+            width: $smallImgWidth;
+            // height: auto;
+            top: $defaultSpacing +10;
+            left: - ($smallImgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+
+            @media screen and (max-width: $breakpoint-small) {
+                height: 188px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 263px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                height: 375px;
+            }
+
+            &.overlap25 {
+                left: - ceil($smallImgWidth * 0.25);
+            }
+
+            &.overlap75 {
+                left: - ceil($smallImgWidth * 0.75);
+            }
+        }
+
+        &.overlapMiddle {
+            position: absolute;
+            width: $imgWidth;
+            // height: auto;
+            top: $defaultHeight / 2 - ceil(($imgWidth / 1.5) / 2); // top: $defaultHeight/3; // left: -(($defaultHeight - 300) / 2) - 20;
+            left: - ($imgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+
+            @media screen and (max-width: $breakpoint-small) {
+                height: 250px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 350px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                height: 500px;
+            }
+        }
+
+        &.overlapMiddleSmall {
+            position: absolute;
+            width: $smallImgWidth;
+            // height: auto;
+            top: $defaultHeight / 2 - ceil(($smallImgWidth / 1.5) / 2);
+            left: - ($smallImgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+
+            @media screen and (max-width: $breakpoint-small) {
+                height: 188px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 263px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                height: 375px;
+            }
+
+            &.overlap25 {
+                left: - ceil($smallImgWidth * 0.25);
+            }
+
+            &.overlap75 {
+                left: - ceil($smallImgWidth * 0.75);
+            }
+        }
+
+        &.overlapBottom {
+            position: absolute;
+            width: $imgWidth;
+            // height: auto;
+            bottom: $defaultSpacing + 10;
+            left: - ($imgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+
+            @media screen and (max-width: $breakpoint-small) {
+                height: 250px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 350px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                height: 500px;
+            }
+        }
+
+        &.overlapBottomSmall {
+            position: absolute;
+            width: $smallImgWidth;
+            // height: auto;
+            bottom: $defaultSpacing + 10;
+            left: - ($smallImgWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+
+            @media screen and (max-width: $breakpoint-small) {
+                height: 188px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 263px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                height: 375px;
+            }
+
+            &.overlap25 {
+                left: - ceil($smallImgWidth * 0.25);
+            }
+
+            &.overlap75 {
+                left: - ceil($smallImgWidth * 0.75);
+            }
+        }
+
+        $overlapLandscapeMediumHeight: $defaultHeight - $defaultSpacing*6;
+        $overlapLandscapeMediumWidth: round($overlapLandscapeMediumHeight / 1.5);
+
+        &.overlapLandscapeMedium {
+            height: $overlapLandscapeMediumHeight;
+            width: $overlapLandscapeMediumWidth; // padding: $defaultSpacing*3 0 0 $defaultSpacing;
+            position: absolute; // width: $imgWidth;
+            top: $defaultHeight / 2 - ceil(($overlapLandscapeMediumWidth / 1.5) / 2); // top: $defaultHeight/3; // left: -(($defaultHeight - 300) / 2) - 20;
+            left: - ($overlapLandscapeMediumWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+        }
+
+        $portraitWidth: round($defaultHeight / 1.5);
+
+        &.overlapPortraitTop {
+            position: absolute;
+            width: $portraitWidth;
+            height: auto; // bottom: $defaultSpacing + 10;
+            left: - ($portraitWidth / 2) + $defaultSpacing;
+            z-index: 1;
+            padding-left: 0;
+
+            @media screen and (max-width: $breakpoint-small) {
+                height: 499px;
+            }
+
+            @media screen and (min-width: $breakpoint-medium) {
+                height: 700px;
+            }
+
+            @media screen and (min-width: $breakpoint-large) {
+                height: 1000px;
+            }
+
+            &.overlap25 {
+                left: - ceil($portraitWidth * 0.25);
+            }
+
+            &.overlap75 {
+                left: - ceil($portraitWidth * 0.75);
+            }
+        }
+
+        &.overlap25 {
+            left: - ceil($imgWidth * 0.25);
+        }
+
+        &.overlap75 {
+            left: - ceil($imgWidth * 0.75);
+        }
+
+        @for $i from 0 through 20 {
+            &.left#{$i * 10}px {
+                padding-left: #{($i * 10)  / $scaling}px;
+            }
+        }
+
+        @for $i from 2 through 4 {
+            &.left#{$i * 100 + 50}px {
+                padding-left: #{($i * 100 + 50) / $scaling}px;
+            }
+
+            &.left#{$i * 100}px {
+                padding-left: #{($i * 100)  / $scaling}px;
+            }
+        }
+
+        &.left0px {
+            margin-left: -1px;
+        }
+
+        &.left5px {
+            padding-left: 5px;
+        }
+
+        // &.left700px {
+        //     padding-left: 700px;
+        // }
+
+    }
+
+    .number {
+        left: $defaultSpacing;
+    }
+}

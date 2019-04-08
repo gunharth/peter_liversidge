@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Peter Liversidge</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/app.css">
 </head>
 
@@ -14,24 +20,41 @@
         <section id="card-section" class="card"></section>
     </div>
     <div id="overlay">
-        <div id="overlay-loader"><img src="img/loader.gif">
+        <div id="overlay-loader"><img src="images/loader.gif">
         </div>
         <div id="overlay-image">
-            <div style=""></div>
+            <div></div>
         </div>
-        <!-- slide controls -->
-       <div class="slide-nav-close" style="display: none;">
-            <div id="slide-close" class="slide-nav">
-                <a class="btn btn-circle" href="#"><img
-                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></a>
+    </div>
+    <div id="intro-overlay">
+        <div id="intro-overlay-loader"><img src="images/loader.gif">
+        </div>
+        <div id="intro-overlay-image">
+            <div id="intro-overlay-content">
+                <div id="arrowR"><a href="#start" id="startSlideshow"><img src="images/arrow_r.png" alt=""></a></div>
+                <div id="arrowL"><a href="#back" id="backToHome"><img src="images/arrow_l.png" alt=""></a></div>
+                <div id="intro-overlay-text">
+                    <h1>One hundred and forty one miles.</h1>
+                    <p>Between September 12th and November 2nd 2018 artist Peter Liversidge and Swiss documentary and portrait photographer Mischa Haller walked the 141 miles of the new HS2 railway between London Euston and Birmingham New Street. They left Euston and followed the route before work started on building HS2 – Britain’s new high speed railway. The route was followed the entire length, never straying more than 200 metres from the edge of the project as it makes its way from London to Birmingham. Peter and Mischa took over 8,500 images, recording the diversity of the communities and landscapes along the route.</p>
+                    <p>Peter Liversidge is an internationally renowned British artist notable for his diverse artistic practice. He was appointed by HS2 Ltd in May 2018 to create artistic responses to the work of HS2, the route and its communities, in order to leave a lasting legacy for the project.</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <img id="hs2-logo" src="images/HS2_logo.png" alt="HS2">
+                </div>
             </div>
         </div>
-
     </div>
     <script src="js/manifest.js"></script>
     <script src="js/vendor.js"></script>
     <script src="js/app.js"></script>
     <script src="config.js"></script>
+    <script>
+    window.lazySizesConfig = window.lazySizesConfig || {};
+        lazySizesConfig.unloadPixelThreshold = 200 * 100; //unloads images that are larger than 200 x 100
+    </script>
+    <script src="js/ls.unload.min.js"></script>
 </body>
 
 </html>

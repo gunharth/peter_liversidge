@@ -1,17 +1,217 @@
+$breakpoint-small: 480px;
+$breakpoint-medium: 481px;
+$breakpoint-large: 1681px;
+
+$overlay-background: rgb(246, 246, 246);
+$font-size: 16px;
+$line-height: 32px;
+
 html,
 body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 body {
-    background-color: #DDDCE3;
+    background-color: $overlay-background;
     margin: 0;
     display: flex;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(156, 156, 156);
+
+    @media screen and (max-width: $breakpoint-small) {
+        font-size: $font-size;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        font-size: $font-size;
+    }
+
+    @media screen and (min-width:$breakpoint-large) {
+        font-size: $font-size;
+    }
+}
+
+h1 {
+    color: #000;
+
+    margin: 0;
+    font-weight: 100;
+    text-align: center;
+    $h1-margin-bottom: 130px;
+
+    @media screen and (max-width: $breakpoint-small) {
+        font-size: $font-size + 3;
+        margin-bottom: $h1-margin-bottom - 70;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        font-size: $font-size + 8;
+        margin-bottom: $h1-margin-bottom - 30;
+    }
+
+    @media screen and (min-width:$breakpoint-large) {
+        font-size: $font-size + 18;
+        margin-bottom: $h1-margin-bottom;
+    }
+}
+
+#intro-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: $overlay-background;
+    // display: none;
+}
+
+#intro-overlay-loader {
+    position: absolute;
+    width: 100%;
+    // top: calc(50% - 20px);
+    height: 100%;
+    z-index: 200;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $overlay-background;
+}
+
+#intro-overlay-image {
+    height: 100%;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#intro-overlay-content {
+    height: 80%;
+    width: 80%; // margin: 10% 0 0 10%;
+    background: url(../images/map.jpg) center center / contain no-repeat;
+    position: static;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    position: relative;
+    // overflow: auto;
+    // display: none;
+    // overflow-y: scroll;
+    // overflow-x: visible;
+}
+
+#arrowR {
+    position: absolute;
+    right: 0%;
+    top: calc(50% - 35px);
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#arrowL {
+    position: absolute;
+    left: 0;
+    top: calc(50% - 35px);
+    display: none;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#intro-overlay-content.textview {
+
+    #arrowR {
+        right: -20%;
+    }
+
+    #arrowL {
+        display: block;
+        left: -20%;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+        width: 90%;
+        // min-width: 800px;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        width: 90%;
+        max-width: 540px;
+    }
+
+    @media screen and (min-width:$breakpoint-large) {
+        width: 32%;
+        min-width: 800px;
+    }
+}
+
+#intro-overlay-text {
+    display: none;
+    text-align: center;
+}
+
+#intro-overlay-content.textview #intro-overlay-text {
+
+    @media screen and (min-width: $breakpoint-medium) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#intro-overlay-text #hs2-logo {
+
+    @media screen and (max-width: $breakpoint-small) {
+        margin-top: 100px;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin-top: 60px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        margin-top: 60px;
+        position: absolute;
+        bottom: 0;
+    }
+
+}
+
+#intro-overlay-text p {
+    text-align: justify;
+
+    @media screen and (max-width: $breakpoint-small) {
+        line-height: $line-height - 10;
+    }
+
+    @media screen and (min-width: $breakpoint-medium) {
+        // width: 90%;
+        // max-width: 540px;
+        line-height: $line-height - 8;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        line-height: $line-height - 8;
+    }
 }
 
 #overlay {
@@ -45,7 +245,7 @@ body {
 #overlay-image div {
     height: 80%;
     width: 80%; // margin: 10% 0 0 10%;
-    background: url(../public/img/transparent.png) center center / contain no-repeat;
+    background: url(../images/transparent.png) center center / contain no-repeat;
     position: static;
     top: 0px;
     left: 0px;
@@ -81,14 +281,17 @@ body {
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000;
 }
 
 #animation-wrapper.debug {
     overflow: scroll;
+    will-change: transform;
 }
 
 .animate {
-    transform: translate3d(0, 0, 0);
+    // transform: translate3d(0, 0, 0);
     animation: moveSlideshow 120s linear infinite;
 }
 
@@ -113,16 +316,77 @@ body {
     z-index: 3
 }
 
-@import '_mixins.scss';
-@media screen and (max-width: 480px) {
+@import '_theme.scss';
+
+@media screen and (max-width: $breakpoint-small) {
+
+    #intro-overlay-content {
+        overflow: auto;
+    }
+
+    #intro-overlay-content #arrowR {
+        top: calc(80% - 35px);
+        width: 80px;
+        right: 0;
+    }
+
+    #intro-overlay-content #arrowL {
+        width: 80px;
+    }
+
+    #intro-overlay-content.textview #arrowR {
+        top: 110%;
+        right: 0;
+    }
+
+    #intro-overlay-content.textview #arrowL {
+        top: 110%;
+        left: 0;
+    }
+
     // $defaultHeight, $defaultSpacing
-    @include theme(500px, 40px);
+    @include theme(500px, 40px, 4);
+
+    .card--content img {
+        &.left700px {
+            padding-left: 200px;
+        }
+    }
 }
-@media screen and (min-width: 481px) {
+
+@media screen and (min-width: $breakpoint-medium) {
+
+    #intro-overlay-content #arrowR {
+        width: 80px;
+    }
+
+    #intro-overlay-content #arrowL {
+        width: 80px;
+    }
+
     // $defaultHeight, $defaultSpacing
-    @include theme(700px, 40px);
+    @include theme(700px, 40px, 2);
+
+    .card--content img {
+        &.left700px {
+            padding-left: 350px;
+        }
+    }
 }
-@media screen and (min-width: 1441px) {
-    // $defaultHeight, $defaultSpacing
-    @include theme(1000px, 40px);
+
+@media screen and (min-width: $breakpoint-large) {
+    // $defaultHeight, $defaultSpacing, scaling factor
+    @include theme(1000px, 40px, 1);
+
+    .card--content img {
+        &.left700px {
+            padding-left: 700px;
+        }
+    }
+}
+
+.card--content img {
+    &.right1000px {
+        padding-right: 1000px;
+    }
 }

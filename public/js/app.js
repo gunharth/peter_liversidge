@@ -21,11 +21,11 @@ function moveToCard(num) {
 $(function () {
   if (debug) {
     $('#animation-wrapper').addClass('debug');
+    $('#intro-overlay').hide();
   } else {
-    setTimeout(function () {
-      $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration + "s");
-    }, 3000); // $(window).on('resize', function () {
-    // }
+    $('#intro-overlay-loader').fadeOut(); // setTimeout(() => {
+    //     $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration+"s");
+    // }, 3000);
   }
 
   var cardSection = $('#card-section');
@@ -68,6 +68,7 @@ $(function () {
 
     if (left5px.includes(i)) style += ' left5px';
     if (left700px.includes(i)) style += ' left700px';
+    if (right1000px.includes(i)) style += ' right1000px';
     if (zIndex2.includes(i)) zIndex += 'zIndex2';
 
     for (var _j = 0; _j <= 20; _j++) {
@@ -82,7 +83,7 @@ $(function () {
       if (eval(_space2).includes(i)) outerRightMargin += ' ' + _space2;
     }
 
-    cardSection.append("<div class=\"card--content ".concat(zIndex, " ").concat(outerLeftMargin, " ").concat(outerRightMargin, "\" id=\"card-").concat(i, "\"><img data-src=\"").concat(imageURL, "/").concat(String(i).padStart(3, '0'), ".jpg\" class=\"").concat(style, " lazyload\" alt=\"\">").concat(debug ? "<div class=\"number\">".concat(i, "</div>") : '', "</div>")); // RESPONSIVE cardSection.append(`<div class="card--content">
+    cardSection.append("<div class=\"card--content ".concat(zIndex, " ").concat(outerLeftMargin, " ").concat(outerRightMargin, "\"").concat(debug ? " id=\"card-".concat(i, "\"") : '', "><img data-src=\"").concat(imageURL, "/").concat(String(i).padStart(3, '0'), ".jpg\" src=\"images/transparent.png\" class=\"").concat(style, " lazyload\" alt=\"\">").concat(debug ? "<div class=\"number\">".concat(i, "</div>") : '', "</div> ")); // RESPONSIVE cardSection.append(`<div class="card--content">
     //                         <img
     //                             data-sizes="auto"
     //                             data-src="${imageURL}/${String(i).padStart(3, '0')}.jpg"
@@ -110,9 +111,31 @@ $(function () {
     $('#overlay-image div').hide();
     if (!debug) $('#animation-wrapper').toggleClass('paused');
   });
+  $('#intro-overlay-image').on('click', function (e) {
+    e.preventDefault();
+    $('#intro-overlay-content').css('background-image', 'none').addClass('textview');
+    $('#intro-overlay-text').fadeIn();
+  });
+  $('#backToHome').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('#intro-overlay-content').removeAttr('style').removeClass('textview');
+    $('#intro-overlay-text').hide();
+  });
+  $('#intro-overlay-content').on('click', '#startSlideshow', function (e) {
+    if ($(e.target).parents().hasClass('textview')) {
+      e.preventDefault();
+      e.stopPropagation();
+      $('#intro-overlay').fadeOut(1000, function () {
+        setTimeout(function () {
+          $('#animation-wrapper').addClass('animate').css('animation-duration', animationDuration + "s");
+        }, 2000);
+      });
+    }
+  });
   setInterval(function () {
     lazySizes.loader.checkElems();
-  }, 1000);
+  }, 300);
 
   if (debug) {
     if (window.location.hash) {
