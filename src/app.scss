@@ -264,10 +264,12 @@ h1 {
 
 .card--content img {
     z-index: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+    // -webkit-backface-visibility: hidden;
+    // backface-visibility: hidden;
+    // -webkit-transform-style: preserve-3d;
+    // transform-style: preserve-3d;
+    width: 100%;
+    height: auto;
 }
 
 .card--content img:hover {

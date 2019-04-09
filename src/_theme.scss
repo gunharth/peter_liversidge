@@ -4,6 +4,11 @@
     }
 
     .card--content {
+
+        &.landscapeLarge {
+            height: $defaultHeight;
+            width: round($defaultHeight * 1.5);
+        }
         &.zIndex2 {
             z-index: 2;
         }
@@ -24,10 +29,10 @@
     .card--content img {
         padding-left: $defaultSpacing;
 
-        &.landscapeLarge {
-            height: $defaultHeight;
-            width: round($defaultHeight * 1.5);
-        }
+        // &.landscapeLarge {
+        //     height: $defaultHeight;
+        //     width: round($defaultHeight * 1.5);
+        // }
 
         &.portraitLarge {
             height: $defaultHeight;
