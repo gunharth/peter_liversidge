@@ -1030,11 +1030,6 @@ h1 {
     left: 40px;
   }
 }
-@media screen and (max-width: 480px) {
-  .card--content img.left700px {
-    padding-left: 200px;
-  }
-}
 @media screen and (min-width: 481px) {
   #intro-overlay-content #arrowR {
     width: 80px;
@@ -1742,11 +1737,6 @@ h1 {
     left: 40px;
   }
 }
-@media screen and (min-width: 481px) {
-  .card--content img.left700px {
-    padding-left: 350px;
-  }
-}
 @media screen and (min-width: 1681px) {
   .card {
     height: 1000px;
@@ -2446,11 +2436,10 @@ h1 {
     left: 40px;
   }
 }
-@media screen and (min-width: 1681px) {
-  .card--content img.left700px {
-    padding-left: 700px;
-  }
-}
 .card--content img.right1000px {
   padding-right: 1000px;
+}
+
+.card--content img.left700px {
+  padding-left: 100vw;
 }

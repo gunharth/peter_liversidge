@@ -349,11 +349,11 @@ h1 {
     // $defaultHeight, $defaultSpacing
     @include theme(500px, 40px, 4);
 
-    .card--content img {
-        &.left700px {
-            padding-left: 200px;
-        }
-    }
+    // .card--content img {
+    //     &.left700px {
+    //         padding-left: 200px;
+    //     }
+    // }
 }
 
 @media screen and (min-width: $breakpoint-medium) {
@@ -369,26 +369,42 @@ h1 {
     // $defaultHeight, $defaultSpacing
     @include theme(700px, 40px, 2);
 
-    .card--content img {
-        &.left700px {
-            padding-left: 350px;
-        }
-    }
+    // .card--content img {
+    //     &.left700px {
+    //         padding-left: 350px;
+    //     }
+    // }
 }
 
 @media screen and (min-width: $breakpoint-large) {
     // $defaultHeight, $defaultSpacing, scaling factor
     @include theme(1000px, 40px, 1);
 
-    .card--content img {
-        &.left700px {
-            padding-left: 700px;
-        }
-    }
+    // .card--content img {
+    //     &.left700px {
+    //         padding-left: 700px;
+    //     }
+    // }
 }
+
+// @media screen and (min-width: 2400px) {
+//     // $defaultHeight, $defaultSpacing, scaling factor
+
+//     .card--content img {
+//         &.left700px {
+//             padding-left: 2600px;
+//         }
+//     }
+// }
 
 .card--content img {
     &.right1000px {
         padding-right: 1000px;
+    }
+}
+
+.card--content img {
+    &.left700px {
+        padding-left: 100vw;
     }
 }
