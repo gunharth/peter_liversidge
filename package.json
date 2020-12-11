@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.0",
-    "lazysizes": "^4.1.6",
+    "lazysizes": "^5.2.1",
     "yall-js": "^2.2.2"
   },
   "main": "webpack.mix.js",
